@@ -104,6 +104,9 @@
     </footer>
 
 <script>
+require('dotenv').config();
+
+
 function validateAndSubmit() {
     var requiredFields = document.querySelectorAll('input[required], textarea[required]');
     var hasEmptyFields = false;
@@ -134,7 +137,7 @@ function submitApplication() {
     var previousDepartments = document.getElementById("previousDepartments").value;
     var referral = document.getElementById("referral").value;
 
-    var webhookUrl = "https://discord.com/api/webhooks/1089292411336933467/MEKhleixcTo6x9xLl0HP9uWBR96PljjRAiG_Q5SdiydFtSS40uIVQfHoDlbfcBmhvNqq"; // Replace with your actual webhook URL
+    var webhookUrl = process.env.WEBHOOK_URL;
 
     var payload = {
         "embeds": [
