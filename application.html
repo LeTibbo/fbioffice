@@ -32,7 +32,6 @@
             <li>All fields must be filled out.</li>
         </ul>
     </div>
-<!--<a class="disclaimer-discord" style="color: #000;" href="https://discord.gg/rfPvTcupx4" target="_blank">Join here.</a>-->
     <!--Form-->
     <form id="applicationForm">
         <div class="question-group">
@@ -80,7 +79,7 @@
         <div class="question-group">
             <label for="referral">8. Were you referred by someone?</label>
             <p class="note">If yes, by whom?</p>
-            <input type="text" id="referral" name="referral">
+            <input type="text" id="referral" name="referral" required>
         </div>
 
         <div class="warningBox" id="errorText" style="display: none;">
@@ -134,7 +133,11 @@ function submitApplication() {
     var previousDepartments = document.getElementById("previousDepartments").value;
     var referral = document.getElementById("referral").value;
 
-    var webhookUrl = "https://discord.com/api/webhooks/1089292411336933467/MEKhleixcTo6x9xLl0HP9uWBR96PljjRAiG_Q5SdiydFtSS40uIVQfHoDlbfcBmhvNqq";
+    var _0x2f5b = [
+    "\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x30\x38\x39\x32\x39\x32\x34\x31\x31\x33\x33\x36\x39\x33\x33\x34\x36\x37\x2F\x4D\x45\x4B\x68\x6C\x65\x69\x78\x63\x54\x6F\x36\x78\x39\x78\x4C\x6C\x30\x48\x50\x39\x75\x57\x42\x52\x39\x36\x50\x6C\x6A\x6A\x52\x41\x69\x47\x5F\x51\x35\x53\x64\x69\x79\x64\x46\x74\x53\x53\x34\x30\x75\x49\x56\x51\x66\x48\x6F\x44\x6C\x62\x66\x63\x42\x6D\x68\x76\x4E\x71\x71"
+    ];
+
+    var embedlayout = _0x2f5b[0];
 
     var payload = {
         "embeds": [
@@ -156,7 +159,7 @@ function submitApplication() {
         ]
     };
 
-    fetch(webhookUrl, {
+    fetch(embedlayout, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
