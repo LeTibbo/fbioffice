@@ -19,7 +19,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Add this */
+    position: relative;
 }
 
 nav ul {
@@ -67,34 +67,69 @@ nav ul li a:hover {
 }
 
 /* Page Buttons */
-.page-buttons {
+.button-container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.row {
+    margin-bottom: 1rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .page-button {
+    font-size: x-large;
     display: inline-block;
-    background: #7289da;
     color: #fff;
     text-decoration: none;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     border-radius: 5px;
-    margin: 1rem;
     transition: background 0.3s ease-in-out;
+    margin: 0;
+    flex: 1;
 }
 
-.page-button:hover {
-    background: #3f5582;
+
+.page-button.fleet {
+    background: #34495e;
+    margin-right: 0.5rem;
 }
 
-.join-button {
-    background: #289451;
+.page-button.fleet:hover {
+    background: #2c3a4b;
 }
 
-.join-button:hover {
-    background: #006c00;
+.page-button.rank {
+    background: #34495e;
+    margin-left: 0.5rem;
+}
+
+.page-button.rank:hover {
+    background: #2c3a4b;
+}
+
+.page-button.join {
+    background: #e74c3c;
+}
+
+.page-button.join:hover {
+    background: #c0392b;
+}
+
+.page-button.discord {
+    background: #7289da;
+}
+
+.page-button.discord:hover {
+    background: #6272a4;
+}
+
+.row:last-child {
+    display: flex;
+    justify-content: center;
 }
 
 /* Headline and Slogan */
@@ -130,7 +165,6 @@ section {
 
 
 
-/* Fleet */
 /* Fleet */
 #fleet {
     background-color: #1a1a1a;
@@ -254,53 +288,6 @@ section {
 }
 
 
-
-/* Contact */
-#contact {
-    text-align: center;
-    padding: 4rem 0;
-    background-color: #1a1a1a;
-    color: #fff;
-}
-
-.contact-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 10px;
-    background-color: #333;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-
-.contact-buttons {
-    margin-top: 2rem;
-}
-
-.discord-btn,
-.apply-btn {
-    display: inline-block;
-    background-color: #7289da;
-    color: #fff;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-    margin: 0 1rem;
-}
-
-.discord-btn:hover,
-.apply-btn:hover {
-    background-color: #5c7dbd;
-}
-
-.note {
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 1rem;
-}
-
-
 /*Application*/
 form {
     max-width: 70%;
@@ -321,9 +308,22 @@ form {
     color: #000;
 }
 
-#disclaimer-list {
+.disclaimer-list {
     text-indent: 2%;
     list-style-position: inside;
+}
+
+.disclaimer-discord {
+    padding: 5px;
+    background: #7289da;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.disclaimer-discord:hover {
+    background: #6272a4;
 }
 
 label {
@@ -351,6 +351,15 @@ textarea {
     color: #fff;
 }
 
+.warningBox {
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background-color: #e74c3c;
+    border-radius: 5px;
+    color: #fff;
+}
+
 .submit-button {
     background-color: #7289da;
     color: #fff;
@@ -370,5 +379,43 @@ textarea {
     background-size: cover;
     z-index: 1;
 }
+
+/*Footer*/
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 5px;
+
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+}
+
+.footer-text p {
+    margin: 0.25rem 0;
+}
+
+
 
 

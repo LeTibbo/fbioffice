@@ -11,11 +11,11 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="./fleet">Fleet</a></li>
-            <li><a href="./ranks">Ranks</a></li>
-            <li><a href="./application">Apply</a></li>
-            <li><a href="https://discord.gg/rfPvTcupx4 ">Discord</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./fleet.html">Fleet</a></li>
+            <li><a href="./ranks.html">Ranks</a></li>
+            <li><a href="./application.html">Apply</a></li>
+            <li><a href="https://discord.gg/rfPvTcupx4">Discord</a></li>
         </ul>
     </nav>
 
@@ -26,52 +26,55 @@
 
     <div class="disclaimer">
         <h2>Disclaimer</h2>
-        <ul id="disclaimer-list">
-            <li>You <strong>need</strong> to be a part of the FBI Discord to apply. <a class="disclaimer-discord" style="color: #000;" href="https://discord.gg/rfPvTcupx4" target="_blank">Join here.</a></li>
+        <ul class="disclaimer-list">
+            <li>You <strong>need</strong> to be a part of the FBI Discord to apply. <a class="disclaimer-discord" href="https://discord.gg/rfPvTcupx4" target="_blank">Join Discord</a></li>
             <li>Providing incorrect answers or lack of effort in your responses <strong>will</strong> result in rejection.</li>
+            <li>All fields must be filled out.</li>
         </ul>
     </div>
-
+<!--<a class="disclaimer-discord" style="color: #000;" href="https://discord.gg/rfPvTcupx4" target="_blank">Join here.</a>-->
     <!--Form-->
     <form id="applicationForm">
         <div class="question-group">
             <label for="discordID">1. What is your Discord User ID?</label>
-            <p class="note"><a class="note" href="https://www.youtube.com/watch?v=NLWtSHWKbAI" target="_blank">YouTube - How to get User ID?</a> - Example: 493455159201103882</p>
-            <input type="number" id="discordID" name="discordID" required>
+            <p class="note"><a class="note" href="https://www.youtube.com/watch?v=NLWtSHWKbAI" target="_blank">YouTube - How to get User ID?</a></p>
+            <input type="number" id="discordID" name="discordID" required placeholder="Example: 1051083700437274675">
         </div>
 
         <div class="question-group">
             <label for="username">2. What is your Ingame Username?</label>
             <p class="note">You can find this at a station computer under "Employment Info"</p>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" required placeholder="Example: Wheezle15">
         </div>
 
         <div class="question-group">
             <label for="badgeid">3. What is your Badge ID?</label>
             <p class="note">You can find this at a station computer under "Employment Info"</p>
-            <input type="number" id="badgeid" name="badgeid" required>
+            <input type="number" id="badgeid" name="badgeid" required placeholder="Example: 2045">
         </div>
 
         <div class="question-group">
             <label for="playTime">4. How much do you play on average?</label>
             <p class="note">Eg. 1h on weekdays, 3h on weekends</p>
-            <input type="text" id="playTime" name="playTime" required>
+            <input type="text" id="playTime" name="playTime" required placeholder="Example: 1h on weekdays, 3h on weekends.">
         </div>
 
         <div class="question-group">
             <label for="playDuration">5. How long have you been playing on Police World?</label>
+            <p class="note">We can and will check this info.</p>
             <input type="text" id="playDuration" name="playDuration" required>
         </div>
 
         <div class="question-group">
             <label for="aboutYou">6. Tell us about yourself.</label>
+            <p class="note">Who are you? What are your hobbies? Favourite food?</p>
             <textarea id="aboutYou" name="aboutYou" rows="4" required></textarea>
         </div>
 
         <div class="question-group">
             <label for="previousDepartments">7. Have you been in other departments before?</label>
             <p class="note">If yes, which?</p>
-            <input type="text" id="previousDepartments" name="previousDepartments" required>
+            <input type="text" id="previousDepartments" name="previousDepartments" required placeholder="Example: Yes, LAPD and Rangers.">
         </div>
 
         <div class="question-group">
@@ -80,13 +83,25 @@
             <input type="text" id="referral" name="referral">
         </div>
 
-        <div>
-            <p id="errorText" style="color: red; display: none;">Please fill out all fields.</p>
+        <div class="warningBox" id="errorText" style="display: none;">
+            <h3>Warning</h3>
+            <p>Please fill out all fields.</p>
         </div>
 
         <button class="submit-button" type="button" onclick="validateAndSubmit()">Submit</button>
     </form>
-
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/FBI.png" alt="FBI Logo" class="logo">
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2023 Federal Bureau of Investigation - Police World. All rights reserved.</p>
+                <p>Join our community and make a difference.</p>
+            </div>
+        </div>
+    </footer>
 
 <script>
 function validateAndSubmit() {
@@ -158,6 +173,5 @@ function submitApplication() {
     });
 }
 </script>
-
 </body>
 </html>
