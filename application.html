@@ -167,7 +167,7 @@ function submitApplication() {
         body: JSON.stringify(payload)
     })
     .then(response => {
-        console.log("Application sent to Discord webhook.");
+        console.log("Application sent!.");
         window.location.href = './success';
     })
     .catch(error => {
