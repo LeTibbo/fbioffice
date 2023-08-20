@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.6;
     background-color: #1a1a1a;
     color: #fff;
@@ -272,12 +272,13 @@ section {
 }
 
 .rank-code {
-    color: #666;
+    display: block;
+    color: #fff;
 }
 
 .xp-requirement {
     display: block;
-    color: #888;
+    color: #fff;
     font-size: 1rem;
     margin-top: 0.5rem;
 }
@@ -298,6 +299,16 @@ form {
     background-color: #333;
 }
 
+.warning {
+    max-width: 70%;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background-color: #e74c3c;
+    border-radius: 5px;
+    color: #222;
+}
+
 .disclaimer {
     max-width: 70%;
     padding: 20px;
@@ -305,7 +316,7 @@ form {
     margin-bottom: 1rem;
     background-color: #eac87f;
     border-radius: 5px;
-    color: #000;
+    color: #222;
 }
 
 .disclaimer-list {
@@ -351,7 +362,7 @@ textarea {
     color: #fff;
 }
 
-.warningBox {
+.errorBox {
     max-width: 100%;
     padding: 10px;
     margin-bottom: 1rem;
@@ -374,11 +385,6 @@ textarea {
     background-color: #5c7dbd;
 }
 
-.sucess {
-    background-image: url('images/test.png');
-    background-size: cover;
-    z-index: 1;
-}
 
 /*Footer*/
 footer {
