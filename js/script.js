@@ -13,7 +13,17 @@ function validateAndSubmit() {
         return;
     } else {
         document.getElementById("errorText").style.display = "none";
+
+        var discordID = document.getElementById("discordID").value;
+        var regex = /^\d{18}$/;
+
+        if (!regex.test(discordID)) {
+            document.getElementById("discordIDError").style.display = "block";
+            return;
+        } else {
+            document.getElementById("discordIDError").style.display = "none";
         submitApplication();
+        }
     }
 }
 

@@ -92,10 +92,19 @@ nav ul li a:hover {
     flex: 1;
 }
 
+.page-button.info {
+    background: #34495e;
+    margin-right: 0.5rem;
+}
+
+.page-button.info:hover {
+    background: #2c3a4b;
+}
 
 .page-button.fleet {
     background: #34495e;
     margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 .page-button.fleet:hover {
@@ -162,6 +171,75 @@ section {
     background-color: #1a1a1a;
     color: #fff;
 }
+
+
+
+/* Styling for the information cards */
+.information-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+}
+
+.information-card {
+    width: 70%; /* Two cards per row with a little margin */
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.card-header i {
+    margin-right: 10px;
+}
+
+.card-header h2 {
+    margin: 0;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.info-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+}
+
+/* Horizontal Lines */
+.info-line {
+    width: 100%;
+    height: 1px;
+    background-color: #555;
+    border: none;
+    margin: 5px 0;
+}
+
+/* Fleet Button */
+.fleet-button {
+    padding: 5px;
+    background: #34495e;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.fleet-button:hover {
+    background: #2c3a4b;
+}
+
 
 
 
